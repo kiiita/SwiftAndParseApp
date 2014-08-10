@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().translucent = true
        
         // Parse.comの設定
-        Parse.setApplicationId("qUotZNg23iS9TeYNiQ0Fe6fMmlwfBS3tnHJMrQKu", clientKey: "VCdN8sS017aYt8qxRfXyPp4fEpKe65Jc9VfzOEtK")
+        Parse.setApplicationId("ClientID", clientKey: "ClientKEY")
         
         
         return true
