@@ -13,7 +13,7 @@ class TimelineTableViewController: UITableViewController {
     var timelineData:NSMutableArray = NSMutableArray()
     
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     

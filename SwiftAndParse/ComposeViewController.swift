@@ -10,10 +10,10 @@ import UIKit
 
 class ComposeViewController: UIViewController,UITextViewDelegate {
 
-    @IBOutlet strong var tweetTextView: UITextView! = UITextView()
-    @IBOutlet strong var charRemainingLabel: UILabel! = UILabel()
+    @IBOutlet var tweetTextView: UITextView! = UITextView()
+    @IBOutlet var charRemainingLabel: UILabel! = UILabel()
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     

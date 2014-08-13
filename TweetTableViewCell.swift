@@ -10,11 +10,11 @@ import UIKit
 
 class TweetTableViewCell: UITableViewCell {
 
-    @IBOutlet strong var usernameLabel: UILabel! = UILabel()
-    @IBOutlet strong var timestampLabel: UILabel! = UILabel()
-    @IBOutlet strong var tweetTextView: UITextView! = UITextView()
-    init(style: UITableViewCellStyle, reuseIdentifier: String) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    @IBOutlet var usernameLabel: UILabel! = UILabel()
+    @IBOutlet var timestampLabel: UILabel! = UILabel()
+    @IBOutlet var tweetTextView: UITextView! = UITextView()
+    required override convenience init(style: UITableViewCellStyle, reuseIdentifier: String) {
+        self.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code
     }
 
