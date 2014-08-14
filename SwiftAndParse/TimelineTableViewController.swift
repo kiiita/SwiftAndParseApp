@@ -18,7 +18,7 @@ class TimelineTableViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
-    func loadData(){
+    @IBAction func loadData(){
         timelineData.removeAllObjects()
         
         // call databases
@@ -118,15 +118,25 @@ class TimelineTableViewController: UITableViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        var refresh = UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Loading...")
+        refresh.addTarget(self, action: "pullToRefresh", forControlEvents:.ValueChanged)
+        
+        self.refreshControl = refresh
     }
+    
+    func pullToRefresh(){
+        self.loadData()
+        refreshControl.endRefreshing()
+        self.tableView.reloadData()
+        println("reload finised")
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

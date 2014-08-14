@@ -58,6 +58,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Swift&amp;Parse" id="OhF-D4-Baf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="371-RA-08u">
+                            <connections>
+                                <action selector="loadData" destination="l73-rx-0gU" id="TyX-iH-Vgr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f1V-Xh-QCv">
                             <connections>
                                 <segue destination="t86-f9-IAF" kind="push" id="fn8-uP-ZwG"/>
