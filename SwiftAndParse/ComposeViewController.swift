@@ -66,6 +66,14 @@ class ComposeViewController: UIViewController,UITextViewDelegate {
             
     }
     
+    
+    // Signout
+    @IBAction func signOut(sender: AnyObject) {
+        PFUser .logOut()
+        // Go back to a root view if the button was clicked
+        self.navigationController.popToRootViewControllerAnimated(true)
+    }
+
     /*
     // MARK: - Navigation
 

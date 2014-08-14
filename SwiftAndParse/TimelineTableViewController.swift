@@ -70,19 +70,48 @@ class TimelineTableViewController: UITableViewController {
                 tweeter.username = usernameTextfield.text
                 tweeter.password = passwordTextfield.text
                 
-                tweeter.signUpInBackgroundWithBlock{
-                    (success:Bool!, error:NSError!)->Void in
-                    if !error{
-                        println("Sign up successful")
-                    }else{
-                        let errorString = error.userInfo["error"] as NSString
-                        println(errorString)
-                    }
+                // Check already registerd user
+                var checkExist = PFUser.query()
+                checkExist.whereKey("username", equalTo: tweeter.username) // usernameをキーにしてDBを検索
+                checkExist.findObjectsInBackgroundWithBlock {
+                    (objects: [AnyObject]!, error: NSError!) -> Void in
+                    if(objects.count > 0){
+                        println("its username is taken \(objects.count)")
+                        self.signIn(tweeter.username, password:tweeter.password) // Login for already registerd user
+                    } else {                                                    
+                        println("its username hasn't token yet. Let's register!")
+                        self.signUp(tweeter) // Sign up for new user
+                    }                       
                 }
+                
+                
                 
                 }))
             
             self.presentViewController(loginAlert, animated: true, completion: nil)
+        }
+    }
+    
+    func signIn(username:NSString, password:NSString) {
+        PFUser.logInWithUsernameInBackground(username, password: password) {
+            (user: PFUser!, error: NSError!) -> Void in
+            if user {
+                println("existed user")
+            } else {
+                println("not existed user")
+            }
+        }
+    }
+    
+    func signUp(tweeter:PFUser) {
+        tweeter.signUpInBackgroundWithBlock{
+            (success:Bool!, error:NSError!)->Void in
+            if !error{
+                println("Sign up succeeded.")
+            }else{
+                let errorString = error.userInfo["error"] as NSString
+                println(errorString)
+            }
         }
     }
     
@@ -158,7 +187,7 @@ class TimelineTableViewController: UITableViewController {
 
         return cell
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
