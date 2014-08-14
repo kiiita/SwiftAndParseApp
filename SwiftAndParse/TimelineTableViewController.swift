@@ -12,6 +12,7 @@ class TimelineTableViewController: UITableViewController {
     
     var timelineData:NSMutableArray = NSMutableArray()
     
+    @IBOutlet var currentUsername: UILabel!
     
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -47,6 +48,7 @@ class TimelineTableViewController: UITableViewController {
         
         // ログイン、サインアップのアラート
         if (!PFUser.currentUser()) {
+            self.currentUsername.text = "You aren't logged in now."
             var loginAlert:UIAlertController = UIAlertController(title: "Sign UP / Loign", message: "Plase sign up or login", preferredStyle: UIAlertControllerStyle.Alert)
             
             loginAlert.addTextFieldWithConfigurationHandler({
@@ -83,12 +85,13 @@ class TimelineTableViewController: UITableViewController {
                         self.signUp(tweeter) // Sign up for new user
                     }                       
                 }
-                
-                
+                self.currentUsername.text = "Logged in as \(tweeter.username)"
                 
                 }))
             
             self.presentViewController(loginAlert, animated: true, completion: nil)
+        }else{
+            self.currentUsername.text = "Logged in as \(PFUser.currentUser().username)"
         }
     }
     

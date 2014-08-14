@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Timeline Table View Controller-->
+        <!--Swift&Parse-->
         <scene sceneID="i96-b8-gQg">
             <objects>
                 <tableViewController id="l73-rx-0gU" customClass="TimelineTableViewController" customModule="SwiftAndParse" customModuleProvider="target" sceneMemberID="viewController">
@@ -12,6 +12,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You aren't logged in now." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sxc-PE-bzL">
+                            <rect key="frame" x="0.0" y="-21" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="134" id="uQm-Vg-RYv" customClass="TweetTableViewCell" customModule="SwiftAndParse" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -50,7 +57,7 @@
                             <outlet property="delegate" destination="l73-rx-0gU" id="fTa-8C-42Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OhF-D4-Baf">
+                    <navigationItem key="navigationItem" title="Swift&amp;Parse" id="OhF-D4-Baf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f1V-Xh-QCv">
                             <connections>
                                 <segue destination="t86-f9-IAF" kind="push" id="fn8-uP-ZwG"/>
@@ -62,6 +69,9 @@
                         <size key="portraitSize" width="320" height="568"/>
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
+                    <connections>
+                        <outlet property="currentUsername" destination="sxc-PE-bzL" id="pTB-Kw-zSN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xr7-mD-gHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
