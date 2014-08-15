@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA61EA3199D79A1000D420B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA61EA2199D79A1000D420B /* EditViewController.swift */; };
 		1E1438AA1997173D00E955DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1438A91997173D00E955DD /* AppDelegate.swift */; };
 		1E1438AF1997173D00E955DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1438AD1997173D00E955DD /* Main.storyboard */; };
 		1E1438B11997173D00E955DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1438B01997173D00E955DD /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DA61EA2199D79A1000D420B /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		1E1438A41997173D00E955DD /* SwiftAndParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAndParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1438A81997173D00E955DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E1438A91997173D00E955DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				1E1438A91997173D00E955DD /* AppDelegate.swift */,
 				1E1438E0199722DC00E955DD /* TimelineTableViewController.swift */,
 				1E1438E21997234D00E955DD /* ComposeViewController.swift */,
+				1DA61EA2199D79A1000D420B /* EditViewController.swift */,
 				1E1438E6199725C700E955DD /* TweetTableViewCell.swift */,
 				1E1438DD19971A0800E955DD /* SwiftAndParse-Bridging-Header.h */,
 				1E1438AD1997173D00E955DD /* Main.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA61EA3199D79A1000D420B /* EditViewController.swift in Sources */,
 				1E1438E31997234D00E955DD /* ComposeViewController.swift in Sources */,
 				1E1438E1199722DC00E955DD /* TimelineTableViewController.swift in Sources */,
 				1E1438AA1997173D00E955DD /* AppDelegate.swift in Sources */,
@@ -470,6 +474,7 @@
 				1E1438C21997173E00E955DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E1438C31997173E00E955DD /* Build configuration list for PBXNativeTarget "SwiftAndParseTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +483,7 @@
 				1E1438C51997173E00E955DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

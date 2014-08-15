@@ -245,5 +245,15 @@ class TimelineTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if (segue.identifier? == "Hoge") {
+            let nextViewController: EditViewController = segue.destinationViewController as EditViewController
+            var ip: NSIndexPath! = self.tableView.indexPathForSelectedRow()
+            nextViewController.param = self.timelineData.objectAtIndex(ip.row)
+        }else{
+            println("hoge")
+        }
+    }
 
 }
