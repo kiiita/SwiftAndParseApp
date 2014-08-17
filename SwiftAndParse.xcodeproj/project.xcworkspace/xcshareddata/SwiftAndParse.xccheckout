@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D3D4B45D-5A2D-437C-B2FA-967E5CE7F9AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftAndParse</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B27B95F95192EE83295E72277952D177F0D660A0</key>
+		<string>github.com:kiiita/SwiftAndParseApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftAndParse.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B27B95F95192EE83295E72277952D177F0D660A0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:kiiita/SwiftAndParseApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B27B95F95192EE83295E72277952D177F0D660A0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B27B95F95192EE83295E72277952D177F0D660A0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftAndParseApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
